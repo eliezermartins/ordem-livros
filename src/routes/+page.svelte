@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    import series from "../constantes/series.js";
+    import ItemSerie from "../components/serie/ItemSerie.svelte";
+</script>
+
+<div class="flex flex-col gap-5">
+    {#each series as serie}
+        <ItemSerie {serie} />
+    {/each}
+</div>
